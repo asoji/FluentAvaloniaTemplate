@@ -1,5 +1,7 @@
-﻿namespace FluentAvaloniaTemplate.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-public class HomePageViewModel {
-    
+namespace FluentAvaloniaTemplate.ViewModels;
+
+public partial class HomePageViewModel : ViewModelBase {
+    [ObservableProperty] private string _greetingText = "Howdy!";
 }

@@ -1,11 +1,10 @@
-using Avalonia.Controls;
+using FluentAvalonia.UI.Windowing;
 
 namespace FluentAvaloniaTemplate.Views;
 
-public partial class MainWindow : Window
-{
-    public MainWindow()
-    {
+public partial class MainWindow : AppWindow {
+    public MainWindow() {
+        TitleBar.ExtendsContentIntoTitleBar = false;
         InitializeComponent();
     }
 }

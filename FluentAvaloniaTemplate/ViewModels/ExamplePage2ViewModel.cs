@@ -1,5 +1,7 @@
-﻿namespace FluentAvaloniaTemplate.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-public class ExamplePage2ViewModel {
-    
+namespace FluentAvaloniaTemplate.ViewModels;
+
+public partial class ExamplePage2ViewModel : ViewModelBase {
+    [ObservableProperty] private string _greetingText = "Howdy! This is Example Page 2";
 }

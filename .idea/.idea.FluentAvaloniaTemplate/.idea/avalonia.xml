@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="FluentAvaloniaTemplate/App.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExampePage1View.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExamplePage1View.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExamplePage2View.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExamplePage3View.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExamplePageView1.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExamplePageView2.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/ExamplePageView3.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/HomePageView.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/MainView.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/MainWindow.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/SettingsPageView.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+        <entry key="FluentAvaloniaTemplate/Views/SettingsView.axaml" value="FluentAvaloniaTemplate.Browser/FluentAvaloniaTemplate.Browser.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

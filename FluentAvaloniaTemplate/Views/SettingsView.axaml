@@ -2,7 +2,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
+             xmlns:ia="using:Avalonia.Xaml.Interactions.Animated"
+             xmlns:vm="clr-namespace:FluentAvaloniaTemplate.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="FluentAvaloniaTemplate.Views.SettingsPageView">
-    Welcome to Avalonia!
+             x:Class="FluentAvaloniaTemplate.Views.SettingsView"
+             x:DataType="vm:SettingsViewModel">
+    <UserControl.Resources>
+        <ui:SymbolIconSource x:Key="CommentIcon" Symbol="Comment" />
+    </UserControl.Resources>
+
+    <ScrollViewer Margin="58 20 58 0"
+                  FontWeight="Normal">
+        <Interaction.Behaviors>
+            <ia:VerticalScrollViewerAnimatedBehavior />
+        </Interaction.Behaviors>
+        <StackPanel Spacing="16">
+            <TextBlock Theme="{DynamicResource TitleTextBlockStyle}" Text="About" />
+            <ui:SettingsExpander Header="About Template"
+                                 Description="Basically credits"
+                                 IconSource="{StaticResource CommentIcon}"
+                                 FontWeight="Normal">
+                <ui:SettingsExpanderItem Content="Developed and Designed by"
+                                         Description="asojidev">
+                    <ui:SettingsExpanderItem.Footer>
+                        <WrapPanel>
+                            <HyperlinkButton Content="Home" NavigateUri="https://asoji.one" />
+                            <HyperlinkButton Content="GitHub"
+                                             NavigateUri="https://github.com/asoji" />
+                        </WrapPanel>
+                    </ui:SettingsExpanderItem.Footer>
+                </ui:SettingsExpanderItem>
+                <ui:SettingsExpanderItem
+                    Content="Made with a lot of love and care, design with consideration of others. 💖"
+                    Description="Extra thanks to my boyfriend Hunter for being there for me when I need it, especially when I rage at programming and design. :p"
+                    FontWeight="Bold" />
+                <ui:SettingsExpander.Footer>
+                    <HyperlinkButton Content="GitHub" NavigateUri="https://github.com/asoji/FluentAvaloniaTemplate" />
+                </ui:SettingsExpander.Footer>
+            </ui:SettingsExpander>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

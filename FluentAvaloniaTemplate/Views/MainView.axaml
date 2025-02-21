@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FluentAvaloniaTemplate.ViewModels"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="FluentAvaloniaTemplate.Views.MainView"
              x:DataType="vm:MainViewModel">
@@ -12,5 +13,37 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <ui:NavigationView AlwaysShowHeader="True"
+                       PaneDisplayMode="Auto"
+                       Name="NavigationView"
+                       MenuItemsSource="{Binding MenuItems}"
+                       Content="{Binding CurrentPage}"
+                       SelectedItem="{Binding SelectedItem}"
+                       Header="{Binding HeaderName}"
+                       FontWeight="Bold"
+                       PaneTitle="{Binding PaneName}">
+        <ui:NavigationView.MenuItemTemplateSelector>
+            <vm:MenuItemTemplateSelector>
+                <DataTemplate DataType="{x:Type vm:Item}">
+                    <ui:NavigationViewItem Content="{Binding Name}"
+                                           FontWeight="Normal"
+                                           IconSource="{Binding Icon}"
+                                           ToolTip.Tip="{Binding ToolTip}" />
+                </DataTemplate>
+
+                <vm:MenuItemTemplateSelector.HeaderTemplate>
+                    <DataTemplate DataType="{x:Type vm:Header}">
+                        <ui:NavigationViewItemHeader Content="{Binding Name}" />
+                    </DataTemplate>
+                </vm:MenuItemTemplateSelector.HeaderTemplate>
+
+                <vm:MenuItemTemplateSelector.SeperatorTemplate>
+                    <DataTemplate DataType="{x:Type vm:Seperator}">
+                        <ui:NavigationViewItemSeparator />
+                    </DataTemplate>
+                </vm:MenuItemTemplateSelector.SeperatorTemplate>
+
+            </vm:MenuItemTemplateSelector>
+        </ui:NavigationView.MenuItemTemplateSelector>
+    </ui:NavigationView>
 </UserControl>

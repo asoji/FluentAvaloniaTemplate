@@ -4,8 +4,8 @@ using Avalonia.Markup.Xaml;
 
 namespace FluentAvaloniaTemplate.Views;
 
-public partial class SettingsPageView : UserControl {
-    public SettingsPageView() {
+public partial class SettingsView : UserControl {
+    public SettingsView() {
         InitializeComponent();
     }
 }

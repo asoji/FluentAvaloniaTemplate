@@ -1,5 +1,5 @@
 ﻿namespace FluentAvaloniaTemplate.ViewModels;
 
-public class SettingsViewModel {
+public partial class SettingsViewModel : ViewModelBase {
     
 }
